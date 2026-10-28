@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-ab"
+version = "0.1.0"
+description = "Local-first CLI to A/B test two prompt variants against an OpenAI-compatible endpoint (default Ollama), compare outputs side by side, and save results as Markdown."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+prompt-ab = "prompt_ab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
